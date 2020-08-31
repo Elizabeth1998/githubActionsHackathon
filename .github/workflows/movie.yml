@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 80s movie
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  movie:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        pr-message: 'Thanks for completing a pull request from your branch! Now that you have done some developing, relax and watch an 80s movie, I recommend %{random_movie}'
