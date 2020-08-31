@@ -15,7 +15,7 @@ jobs:
   movie:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/first-interaction@v1
+    - uses: movie.py
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         pr-message: 'Thanks for completing a pull request from your branch! Now that you have done some developing, relax and watch an 80s movie, I recommend %{random_movie}'
